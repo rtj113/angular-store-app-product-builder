@@ -1,0 +1,68 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <label for="product_type">Product Type: </label>
+  <input id="product_type" type="text" formControlName="product_type" />
+
+  <label for="product_type_category">Product Type Category: </label>
+  <input
+    id="product_type_category"
+    type="text"
+    formControlName="product_type_category"
+  />
+
+  <div>
+    <label for="set_number">Set Number: </label>
+    <input id="set_number" type="number" formControlName="set_number" />
+
+    <label for="set_end_number">Set End Number: </label>
+    <input id="set_end_number" type="number" formControlName="set_end_number" />
+
+    <label for="set">Set: </label>
+    <input id="set" type="string" formControlName="set" />
+
+    <label for="year">Year: </label>
+    <input id="year" type="number" formControlName="year" />
+
+    <label for="card_brand">Card Brand: </label>
+    <input id="card_brand" type="string" formControlName="card_brand" />
+
+    <label for="card_name">Card Name: </label>
+    <input id="card_name" type="string" formControlName="card_name" />
+
+    <label for="rarity">Rarity: </label>
+    <input id="rarity" type="string" formControlName="rarity" />
+
+    <label for="special">Special: </label>
+    <input id="special" type="string" formControlName="special" />
+
+    <label for="graded">Graded: </label>
+    <input id="graded" type="string" formControlName="graded" />
+
+    <label for="graded_quality">Graded Quality: </label>
+    <input id="graded_quality" type="string" formControlName="graded_quality" />
+
+    <label for="graded_unique_number">Graded Unique Number: </label>
+    <input
+      id="graded_unique_number"
+      type="string"
+      formControlName="graded_unique_number"
+    />
+
+    <label for="investment">Investment: </label>
+    <input id="investment" type="string" formControlName="investment" />
+
+    <label for="profit_potential">Profit Potential: </label>
+    <input
+      id="profit_potential"
+      type="string"
+      formControlName="profit_potential"
+    />
+
+    <label for="ebay_sold_hi">ebay Sold Hi: </label>
+    <input id="ebay_sold_hi" type="string" formControlName="ebay_sold_hi" />
+
+    <label for="ebay_sold_low">eBay Sold Low: </label>
+    <input id="ebay_sold_low" type="string" formControlName="ebay_sold_low" />
+
+    <button type="submit">Submit</button>
+  </div>
+</form>

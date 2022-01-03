@@ -1,0 +1,30 @@
+<h2>Products</h2>
+
+<div>
+<app-product-builder></app-product-builder>
+<app-profile-editor></app-profile-editor>
+</div>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a
+      [title]="product.card_name + 'details'"
+      [routerLink]="['/products', product.id]"
+    >
+      {{ product.year }} {{ product.card_brand }} {{ product.set }}
+      {{ product.card_name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.set">
+    Desc: {{ product.set_number }} / {{ product.set_end_number }}
+    {{ product.rarity }} {{ product.special }} {{ product.graded }}
+    {{ product.graded_quality }}
+  </p>
+  <p>{{ product.profit_potential | currency }}</p>
+
+  <button (click)="share()">Share</button>
+
+  <app-product-alerts [product]="product" (notify)="onNotify()">
+  </app-product-alerts>
+</div>
