@@ -35,13 +35,13 @@ export class ProductBuilderComponent {
     console.warn(this.productForm.value);
   }
 
-  // updateProfile() {
-  //   this.productForm.patchValue({
-  //     firstName: 'Nancy',
-  //     address: {
-  //       street: '123 Drew Street'
-  //     }
-  //   });
-  // }
+  updateProduct() {
+    this.productForm.patchValue({
+      firstName: 'Nancy',
+      address: {
+        street: '123 Drew Street'
+      }
+    });
+  }
 
 }
