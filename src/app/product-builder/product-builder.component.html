@@ -12,7 +12,7 @@
 
   <div formGroupName="profile_info">
     <label for="set_number">Set Number: </label>
-    <input id="set_number" type="number" formControlName="set_number" />
+    <input id="set_number" type="text" formControlName="set_number" />
 
     <label for="set_end_number">Set End Number: </label>
     <input id="set_end_number" type="number" formControlName="set_end_number" />
@@ -64,11 +64,13 @@
     <label for="ebay_sold_low">eBay Sold Low: </label>
     <input id="ebay_sold_low" type="string" formControlName="ebay_sold_low" />
 
-    <p>Form Status: {{ productForm.status }}</p>
-
-    <button type="submit">Submit</button>
+    
   </div>
-  
+  <div>
+  <p>Form Status: {{ productForm.status }}</p>
+  <p>{{ productForm.value | json }}</p>
+  <button type="submit">Submit</button>
+  </div>
   <div>
   <button (click)="updateProduct()">Update Product</button>
   </div>
