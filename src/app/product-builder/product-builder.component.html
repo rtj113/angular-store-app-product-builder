@@ -1,18 +1,21 @@
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-  <label for="product_type">Product Type: </label>
-  <input id="product_type" type="
-  text" formControlName="product_type" />
 
-  <label for="product_type_category">Product Type Category: </label>
-  <input
-    id="product_type_category"
-    type="text"
-    formControlName="product_type_category"
-  />
-
+  <div formGroupName="product_filter">
+    <label for="product_type">Product Type: </label>
+    <input id="product_type" type="
+    text" formControlName="product_type" />
+  
+    <label for="product_type_category">Product Type Category: </label>
+    <input
+      id="product_type_category"
+      type="text"
+      formControlName="product_type_category"
+    />
+  </div>
+  
   <div formGroupName="product_info">
     <label for="set_number">Set Number: </label>
-    <input id="set_number" type="text" formControlName="set_number" />
+    <input id="set_number" type="number" formControlName="set_number" />
 
     <label for="set_end_number">Set End Number: </label>
     <input id="set_end_number" type="number" formControlName="set_end_number" />
@@ -71,7 +74,9 @@
   <p>{{ productForm.value | json }}</p>
   <button type="submit">Submit</button>
   </div>
+
   <div>
   <button (click)="updateProduct()">Update Product</button>
   </div>
+  
 </form>
