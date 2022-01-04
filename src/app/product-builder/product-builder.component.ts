@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 export class ProductBuilderComponent {
   productForm = this.fb.group({
     product_type: ['', Validators.required ],
-    product_type_category: ['', Validators.required],
+    product_type_category: ['', Validators.required ],
     product_info: this.fb.group({
       set_number: ['', Validators.required],
       set_end_number: ['', Validators.required],
